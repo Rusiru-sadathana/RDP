@@ -23,7 +23,7 @@ sudo adduser LALKRIS chrome-remote-desktop
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
-echo 'https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb' | read -p "Paste Here: " CRP
+CRP = 'DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AY0e-g77b13yylJyU8bJunQNOx726vo8v6Ik4CkaeUL4tDaqi0xxhmIW5nctruBSE3yPeA" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)'
 su - LALKRIS -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
